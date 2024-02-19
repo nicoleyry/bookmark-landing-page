@@ -5,7 +5,7 @@ export default function Main() {
 	return (
 		<div className="main">
 			<div className="content">
-				<h1 className='title'>A Simple Bookmark Manager</h1>
+				<p className='title'>A Simple Bookmark Manager</p>
 				<p className='text'>
 					A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instantly. Try it for free.
 				</p>
@@ -17,6 +17,7 @@ export default function Main() {
 			<div className="hero">
 				<img src={hero} alt="hero"/>
 			</div>
+			
 			<div className="bg-pattern"></div>
 		</div>
 	);

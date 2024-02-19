@@ -34,3 +34,13 @@
 	border-radius: 200px;
 	z-index: -1;
 }
+
+@mixin title() {
+	font-size: 30px;
+	font-weight: 500;
+}
+
+@mixin text() {
+	color: var.$grayish-blue;
+	line-height: 30px;
+}
