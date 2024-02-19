@@ -1,0 +1,42 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+.main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	gap: 50px;
+	align-items: center;
+	position: relative;
+
+	& .content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 30px;
+
+		& .text {
+			color: var.$grayish-blue;
+		}
+
+		& .btn {
+			column-count: 2;
+			font-size: 14px;
+
+			& .chrome {
+				@include mix.btn-style(var.$soft-blue);
+			}
+			& .firefox {
+				@include mix.btn-style(var.$black);
+			}
+		}
+	}
+
+	& .bg-pattern {
+		bottom: 0;
+		right: -65%;
+
+		@include mix.bg-pattern();
+	}
+}

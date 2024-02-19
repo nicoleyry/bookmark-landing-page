@@ -5,8 +5,10 @@ import Main from './components/Main';
 function App() {
 	return (
 		<div className='App'>
-			<Nav />
-			<Main />
+			<div className="container">
+				<Nav />
+				<Main />
+			</div>
 		</div>
 	);
 }

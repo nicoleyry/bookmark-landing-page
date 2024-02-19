@@ -1,8 +1,13 @@
 @use './styles/variables' as var;
 
 .App {
-	max-width: var.$content-width;
-	width: auto;
-	margin: 0 auto;
-	padding: 0 20px;
+	overflow: hidden;
+	
+	& .container {
+		max-width: var.$content-width;
+		width: auto;
+		margin: 0 auto;
+		padding: 0 20px;
+		color: var.$very-dark-blue;
+	}
 }
