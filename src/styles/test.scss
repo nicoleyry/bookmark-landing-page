@@ -1,7 +1,0 @@
-@use "./variables" as var;
-
-.test {
-	& h1 {
-		color: var.$soft-blue;
-	}
-}

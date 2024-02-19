@@ -1,0 +1,38 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+.nav {
+	& .nav-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 50px 0;
+
+		& .logo {
+			cursor: pointer;
+		}
+
+		& .menu-container {
+			display: flex;
+			align-items: center;
+			gap: 30px;
+
+			& .menu {
+				text-transform: uppercase;
+				color: var.$very-dark-blue;
+				cursor: pointer;
+
+				&:hover,
+				&:focus {
+					color: var.$soft-red;
+					transform: translateY(3px);
+					transition-duration: .2s;
+				}
+
+				&.login {
+					@include mix.btn-style(var.$soft-red);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@use "./variables" as var;
+
+@mixin btn-style($main-color) {
+	color: var.$white;
+	box-shadow: 3px 3px 5px rgba(var.$grayish-blue, 0.5);
+	border-radius: 5px;
+	padding: 5px 20px;
+	border: 2px solid transparent;
+	background-color: $main-color;
+
+	&:hover,
+	&:focus {
+		background-color: var.$white;
+		border-color: $main-color;
+		color: $main-color;
+	}
+}
