@@ -1,27 +1,7 @@
 import '../styles/download.scss';
 import Intro from './Intro';
-import chromeImg from '../assets/images/logo-chrome.svg';
-import firefoxImg from '../assets/images/logo-firefox.svg';
-import operaImg from '../assets/images/logo-opera.svg';
 import bgDots from '../assets/images/bg-dots.svg';
-
-let extensionContent = [
-	{
-		name: 'Chrome',
-		image: chromeImg,
-		version: '62',
-	},
-	{
-		name: 'Firefox',
-		image: firefoxImg,
-		version: '55',
-	},
-	{
-		name: 'Opera',
-		image: operaImg,
-		version: '46',
-	},
-];
+import { extensionContent } from '../data.js';
 
 export default function Download() {
 	return (
