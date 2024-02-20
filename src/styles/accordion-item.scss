@@ -1,0 +1,46 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+.accordion-item {
+	border-top: 1px solid var.$grayish-blue;
+	padding: 20px 20px 20px 0;
+	cursor: pointer;
+
+	&:last-child {
+		border-bottom: 1px solid var.$grayish-blue;
+	}
+	
+	&:hover {
+		& .title {
+			color: var.$soft-red;
+		}
+	}
+	
+	& .question {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		& .title {
+			font-weight: 500;
+		}
+
+		& .arrow {
+			&.active {
+				stroke: var.$soft-red;
+				transform: rotate(180deg);
+	
+				& path {
+					stroke: var.$soft-red;
+				}
+			}
+		}
+	}
+
+	& .answer {
+		margin-top: 20px;
+		color: rgba(var.$very-dark-blue, 0.6);
+		line-height: 40px;
+		font-weight: 500;
+	}
+}

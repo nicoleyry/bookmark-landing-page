@@ -1,0 +1,18 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+.faq {
+	margin-bottom: var.$content-gap;
+	text-align: center;
+
+	& .accordion {
+		width: 60%;
+		margin: 40px auto;
+		text-align: left
+	}
+	
+	& .btn {
+		@include mix.btn-style(var.$soft-blue);
+		display: inline-block;
+	}
+}
