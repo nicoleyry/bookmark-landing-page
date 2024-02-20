@@ -3,6 +3,7 @@ import { useState } from 'react';
 import tab1Image from '../assets/images/illustration-features-tab-1.svg';
 import tab2Image from '../assets/images/illustration-features-tab-2.svg';
 import tab3Image from '../assets/images/illustration-features-tab-3.svg';
+import Intro from './Intro';
 
 let tabContent = [
 	{
@@ -30,12 +31,10 @@ export default function Features() {
 
 	return (
 		<div className="features">
-			<div className="intro">
-				<p className="title">Features</p>
-				<p className="text">
-					Our aim is to make it quick and easy for you to access your favorite websites. Your bookmarks sync between your devices so you can access them on the go.
-				</p>
-			</div>
+			<Intro 
+				title={'Features'} 
+				text={'Our aim is to make it quick and easy for you to access your favorite websites. Your bookmarks sync between your devices so you can access them on the go.'} 
+			/>
 			<div className="tabs-container">
 				{tabContent.map((item, index) => (
 					<p className={`${index === activeTab && "active"} tab`}
@@ -50,9 +49,7 @@ export default function Features() {
 				<img src={tabContent[activeTab].image} alt={tabContent[activeTab].title} />
 				<div className="tab-text">
 					<p className="title">{tabContent[activeTab].title}</p>
-					<p className="text">
-					{tabContent[activeTab].text}
-					</p>
+					<p className="text">{tabContent[activeTab].text}</p>
 					<p className="btn-more">More Info</p>
 				</div>
 			</div>

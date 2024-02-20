@@ -2,6 +2,7 @@ import './App.scss';
 import Nav from './components/Nav';
 import Main from './components/Main';
 import Features from './components/Features';
+import Download from './components/Download';
 
 function App() {
 	return (
@@ -10,6 +11,7 @@ function App() {
 				<Nav />
 				<Main />
 				<Features />
+				<Download />
 			</div>
 		</div>
 	);

@@ -2,25 +2,10 @@
 @use "./mixins" as mix;
 
 .features {
-	$bg-pattern-pos: 100px;
+	$bg-pattern-pos: 300px;
 
-	margin-bottom: calc(50px + $bg-pattern-pos);
+	margin-bottom: calc(var.$content-gap + var.$pattern-h - $bg-pattern-pos);
 	position: relative;
-
-	& .intro {
-		text-align: center;
-		width: 50%;
-		margin: 0 auto 30px;
-
-		& .title {
-			margin-bottom: 20px;
-			@include mix.title();
-		}
-
-		& .text {
-			@include mix.text();
-		}
-	}
 
 	& .tabs-container {
 		width: 70%;
@@ -80,7 +65,7 @@
 	}
 
 	& .bg-pattern {
-		bottom: -$bg-pattern-pos;
+		top: $bg-pattern-pos;
 		right: 65%;
 
 		@include mix.bg-pattern();

@@ -2,9 +2,9 @@
 
 .App {
 	overflow: hidden;
-	
+
 	& .container {
-		max-width: var.$content-width;
+		max-width: var.$content-w;
 		width: auto;
 		margin: 0 auto;
 		padding: 0 20px;

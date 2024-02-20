@@ -1,0 +1,60 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+.download {
+	margin-bottom: var.$content-gap;
+
+	& .extension {
+		display: flex;
+		justify-content: space-around;
+		width: 70%;
+		margin: 0 auto;
+		gap: 40px;
+
+		& .card-container {
+			$card-offset-height: 30px;
+
+			&:nth-child(2) {
+				margin-top: $card-offset-height;
+			}
+			&:nth-child(3) {
+				margin-top: $card-offset-height * 2;
+			}
+			
+			& .card {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 10px;
+				padding: 10px;
+				text-align: center;
+				border-radius: 10px;
+				box-shadow: 1px 5px 10px 1px rgba(83, 104, 223, 0.15);
+				overflow: hidden;
+				max-width: 250px;
+	
+				& img {
+					margin-bottom: 10px;
+				}
+	
+				& .name {
+					font-weight: 500;
+					font-size: 14px;
+				}
+	
+				& .note {
+					color: var.$grayish-blue;
+					font-size: 12px;
+					margin-bottom: 10px;
+				}
+	
+				& .btn {
+					@include mix.btn-style(var.$soft-blue);
+					font-size: 14px;
+					margin: 10px auto;
+				}
+			}
+		}
+
+	}
+}

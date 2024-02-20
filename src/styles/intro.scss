@@ -1,0 +1,17 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+.intro {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto 30px;
+
+	& .title {
+		margin-bottom: 20px;
+		@include mix.title();
+	}
+
+	& .text {
+		@include mix.text();
+	}
+}
