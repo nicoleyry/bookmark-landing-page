@@ -1,0 +1,89 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+.contact {
+	margin-top: var.$content-gap;
+	background-color: var.$soft-blue;
+	
+	& .content {
+		max-width: 500px;
+		text-align: center;
+		margin: 0 auto;
+		padding: 50px 0 80px;
+		color: var.$white;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		
+		& .subtitle {
+			text-transform: uppercase;
+			letter-spacing: .3em;
+			font-size: 14px;
+		}
+
+		& .title {
+			@include mix.title();
+			line-height: 40px;
+		}
+
+		& .contact-form {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			gap: 20px;
+			grid-template-rows: 1fr;
+
+			& .input-block {
+				position: relative;
+				& input {
+					height: 50px;
+					width: 100%;
+					border-radius: 5px;
+					border: 2px solid transparent;
+					outline: none;
+					padding-left: 20px;
+					font-weight: 500;
+					position: relative;
+					z-index: 2;
+
+					&.error,
+					&:focus {
+						border-color: var.$soft-red;
+					}
+				}
+
+				& .error-img {
+					position: absolute;
+					top: 25%;
+					right: 20px;
+					z-index: 3;
+				}
+
+				& .error-wrapper {
+					position: absolute;
+					top: 80%;
+					background-color: var.$soft-red;
+					width: 100%;
+					border-radius: 5px;
+					padding: 17px 0 7px 10px;
+					text-align: left;
+
+					& .error-msg {
+						font-style: italic;
+						font-size: 12px;
+					}
+				}
+
+			}
+
+			& .submit-btn {
+				@include mix.btn-style(var.$soft-red);
+				box-shadow: none;
+
+				&:hover,
+				&:focus {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+}
