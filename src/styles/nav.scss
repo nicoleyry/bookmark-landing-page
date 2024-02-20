@@ -17,18 +17,7 @@
 		gap: 30px;
 
 		& .menu {
-			text-transform: uppercase;
-			color: var.$very-dark-blue;
-			cursor: pointer;
-			font-size: 14px;
-			letter-spacing: .2em;
-
-			&:hover,
-			&:focus {
-				color: var.$soft-red;
-				transform: translateY(3px);
-				transition-duration: .2s;
-			}
+			@include mix.menu-text(var.$very-dark-blue);
 
 			&.login {
 				@include mix.btn-style(var.$soft-red);

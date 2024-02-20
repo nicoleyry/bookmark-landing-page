@@ -27,7 +27,7 @@ export default function Contact() {
 
 	return (
 		<div className='contact'>
-			<div className='content'>
+			<div className='wrapper'>
 				<p className='subtitle'>35,000+ already joined</p>
 				<p className='title'>Stay up-to-date with what we're doing</p>
 				<div className='contact-form'>

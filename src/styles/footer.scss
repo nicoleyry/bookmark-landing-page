@@ -1,0 +1,50 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+.footer {
+	background-color: var.$very-dark-blue;
+	color: var.$white;	
+
+	& .wrapper {
+		max-width: 1200px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
+		padding: 35px 0;
+
+		& .menu-container {
+			display: flex;
+			gap: 30px;
+			align-items: center;
+
+			& .menu {
+				@include mix.menu-text(var.$white);
+			}
+
+			& .logo {
+				cursor: pointer;
+
+				&>g>path {
+					fill: var.$white;
+				}
+			}
+		}
+
+		& .social-container {
+			display: flex;
+			gap: 30px;
+			align-items: center;
+
+			& .logo {
+				cursor: pointer;
+
+				&:hover {
+					& path {
+						fill: var.$soft-red;
+					}
+				}
+			}
+		}
+	}
+}

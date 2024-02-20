@@ -4,13 +4,13 @@
 .contact {
 	margin-top: var.$content-gap;
 	background-color: var.$soft-blue;
+	color: var.$white;
 	
-	& .content {
+	& .wrapper {
 		max-width: 500px;
 		text-align: center;
 		margin: 0 auto;
 		padding: 50px 0 80px;
-		color: var.$white;
 		display: flex;
 		flex-direction: column;
 		gap: 50px;

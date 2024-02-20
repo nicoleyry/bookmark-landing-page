@@ -44,3 +44,17 @@
 	color: var.$grayish-blue;
 	line-height: 30px;
 }
+
+@mixin menu-text($font-color) {
+	text-transform: uppercase;
+	color: $font-color;
+	cursor: pointer;
+	font-size: 14px;
+	letter-spacing: .2em;
+
+	&:hover {
+		color: var.$soft-red;
+		transform: translateY(3px);
+		transition-duration: .2s;
+	}
+}
