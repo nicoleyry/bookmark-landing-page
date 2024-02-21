@@ -4,7 +4,12 @@ $grayish-blue: hsl(229, 8%, 60%);
 $very-dark-blue: hsl(229, 31%, 21%);
 $white: #fff;
 $black: #000;
+$very-dark-blue-9: hsla(229, 31%, 21%, 0.9);
 
 $content-w: 1200px;
 $content-gap: 80px;
 $pattern-h: 400px;
+
+// Media Queries
+$breakpoint-m: 650px;
+$breakpoint-s: 400px;

@@ -3,24 +3,42 @@
 @mixin btn-style($main-color) {
 	cursor: pointer;
 	font-weight: 500;
-	box-shadow: 3px 3px 5px rgba(var.$grayish-blue, 0.5);
 	border-radius: 5px;
 	padding: 10px 25px;
-	border: 2px solid transparent;
 
 	@if #{$main-color} == #{var.$black} {
 		color: var.$very-dark-blue;
 		background-color: rgba(var.$grayish-blue, 0.05);
+	} @if #{$main-color} == #{var.$white} {
+		color: var.$white;
+		background-color: transparent;
 	} @else {
 		color: var.$white;
 		background-color: $main-color;
+	}
+
+	@if #{$main-color} == #{var.$white} {
+		border: 2px solid var.$white;
+		box-shadow: none;
+
+		&:hover,
+		&:focus {
+			color: var.$very-dark-blue-9;
+		}
+	} @else {
+		border: 2px solid transparent;
+		box-shadow: 3px 3px 5px rgba(var.$grayish-blue, 0.5);
+
+		&:hover,
+		&:focus {
+			color: rgba($main-color, 0.8);
+		}
 	}
 
 	&:hover,
 	&:focus {
 		background-color: var.$white;
 		border-color: $main-color;
-		color: rgba($main-color, 0.8);		
 		transform: translateY(3px);
 		transition-duration: .2s;
 	}

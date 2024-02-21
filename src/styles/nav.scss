@@ -16,6 +16,10 @@
 		align-items: center;
 		gap: 30px;
 
+		@media screen and (max-width: var.$breakpoint-m) {
+			display: none;
+		}
+
 		& .menu {
 			@include mix.menu-text(var.$very-dark-blue);
 
@@ -23,5 +27,106 @@
 				@include mix.btn-style(var.$soft-red);
 			}
 		}
+	}
+
+	& .hamburgerIcon {
+		display: none;
+		height: 25px;
+
+		@media screen and (max-width: var.$breakpoint-m) {
+			&.show {
+				display: block;
+			}
+		}
+	}
+
+	& .mobile-nav {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 5;
+		background-color: var.$very-dark-blue-9;
+
+		@media screen and (max-width: var.$breakpoint-m) {
+			&.show {
+				display: block;
+			}
+		}
+
+		& .mobile-nav-container {
+			height: 100%;
+			padding: 50px 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			& .top {
+				& .logo-container {
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 30px;
+	
+					& .logo {
+						cursor: pointer;
+			
+						&>g>path,
+						& g circle {
+							fill: var.$white;
+						}
+						& g circle+path {
+							fill: var.$very-dark-blue-9;
+						}
+					}
+					& .closeIcon {
+						height: 25px;
+					}
+				}
+	
+				& .nav-menu-container {
+					display: flex;
+					flex-direction: column;
+					text-align: center;
+	
+					& .menu-box {
+						width: 100%;
+						padding: 20px 0;
+						border-top: 1px solid rgba(var.$grayish-blue, 0.4);
+						
+						& .menu {
+							@include mix.menu-text(var.$white);
+							color: var.$white;
+							font-size: 20px;
+		
+							&.login {
+								@include mix.btn-style(var.$white);
+							}
+						}
+					}
+	
+				}
+			}
+
+			& .bottom {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 40px;
+
+				& .icon {
+					cursor: pointer;
+
+					&:hover {
+						& path {
+							fill: var.$soft-red;
+						}
+					}
+				}
+			}
+
+		}
+
 	}
 }

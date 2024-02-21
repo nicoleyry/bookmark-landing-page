@@ -14,8 +14,8 @@ export default function Footer() {
 					<p className="menu">contact</p>
 				</div>
 				<div className="social-container">
-					<FBLogo className='logo fb' />
-					<TwitterLogo className='logo twitter'/>
+					<FBLogo className='icon fb' />
+					<TwitterLogo className='icon twitter'/>
 				</div>
 			</div>
 		</div>
