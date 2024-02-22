@@ -5,6 +5,7 @@
 	font-weight: 500;
 	border-radius: 5px;
 	padding: 10px 25px;
+	white-space: nowrap;
 
 	@if #{$main-color} == #{var.$black} {
 		color: var.$very-dark-blue;

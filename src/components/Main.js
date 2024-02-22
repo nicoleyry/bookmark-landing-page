@@ -14,9 +14,7 @@ export default function Main() {
 					<p className="firefox">Get it on Firefox</p>
 				</div>
 			</div>
-			<div className="hero">
-				<img src={hero} alt="hero"/>
-			</div>
+			<img src={hero} className="hero" alt="hero"/>
 			
 			<div className="bg-pattern"></div>
 		</div>

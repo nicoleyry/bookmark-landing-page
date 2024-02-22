@@ -6,6 +6,10 @@
 	max-width: 500px;
 	margin: 0 auto 30px;
 
+	@media screen and (max-width: var.$breakpoint-L) {
+		max-width: 100%;
+	}
+
 	& .title {
 		margin-bottom: 20px;
 		@include mix.title();

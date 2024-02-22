@@ -10,12 +10,24 @@
 	position: relative;
 	margin-bottom: var.$content-gap;
 
+	@media screen and (max-width: var.$breakpoint-L) {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, auto);
+		grid-template-areas: "top" "bottom";
+	}
+
 	& .content {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: flex-start;
 		gap: 30px;
+
+		@media screen and (max-width: var.$breakpoint-L) {
+			grid-area: bottom;
+			text-align: center;
+			align-items: center;
+		}
 		
 		& .title {
 			@include mix.title();
@@ -30,12 +42,27 @@
 			column-count: 2;
 			font-size: 14px;
 
+			@media screen and (max-width: var.$breakpoint-s) {
+				column-count: 1;
+			}
+
 			& .chrome {
 				@include mix.btn-style(var.$soft-blue);
+
+				@media screen and (max-width: var.$breakpoint-s) {
+					margin-bottom: 20px;
+				}
 			}
 			& .firefox {
 				@include mix.btn-style(var.$black);
 			}
+		}
+	}
+
+	& .hero {
+		@media screen and (max-width: var.$breakpoint-L) {
+			grid-area: top;
+			width: 100%;
 		}
 	}
 
@@ -44,5 +71,22 @@
 		right: -65%;
 
 		@include mix.bg-pattern();
+
+		@media screen and (max-width: var.$breakpoint-L) {
+			bottom: 35%;
+			right: -35%;
+		}
+
+		@media screen and (max-width: var.$breakpoint-m) {
+			top: 70px;
+			right: -80%;
+			width: 150%;
+			height: 250px;
+		}
+
+		@media screen and (max-width: var.$breakpoint-s) {
+			top: 100px;
+			height: 150px;
+		}
 	}
 }
