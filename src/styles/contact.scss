@@ -10,7 +10,7 @@
 		max-width: 500px;
 		text-align: center;
 		margin: 0 auto;
-		padding: 50px 0 80px;
+		padding: 50px 20px 80px;
 		display: flex;
 		flex-direction: column;
 		gap: 50px;
@@ -29,8 +29,14 @@
 		& .contact-form {
 			display: grid;
 			grid-template-columns: 1fr auto;
-			gap: 20px;
 			grid-template-rows: 1fr;
+			gap: 20px;
+
+			@media screen and (max-width: var.$breakpoint-m) {
+				grid-template-columns: 1fr;
+				grid-template-rows: repeat(2, auto);
+				gap: 40px;
+			}
 
 			& .input-block {
 				position: relative;
