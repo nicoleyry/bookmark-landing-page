@@ -9,7 +9,7 @@
 	@if #{$main-color} == #{var.$black} {
 		color: var.$very-dark-blue;
 		background-color: rgba(var.$grayish-blue, 0.05);
-	} @if #{$main-color} == #{var.$white} {
+	} @else if #{$main-color} == #{var.$white} {
 		color: var.$white;
 		background-color: transparent;
 	} @else {
