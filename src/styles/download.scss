@@ -11,14 +11,29 @@
 		margin: 0 auto;
 		gap: 40px;
 
+		@media screen and (max-width: var.$breakpoint-L) {
+			flex-wrap: wrap;
+			gap: 10px;
+			justify-content: space-evenly;
+			width: 100%;
+		}
+
 		& .card-container {
 			$card-offset-height: 30px;
 
 			&:nth-child(2) {
 				margin-top: $card-offset-height;
+
+				@media screen and (max-width: var.$breakpoint-L) {
+					margin-top: 0;
+				}
 			}
 			&:nth-child(3) {
 				margin-top: $card-offset-height * 2;
+
+				@media screen and (max-width: var.$breakpoint-L) {
+					margin-top: 0;
+				}
 			}
 			
 			& .card {
