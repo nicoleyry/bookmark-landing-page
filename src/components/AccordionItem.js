@@ -10,7 +10,7 @@ export default function AccordionItem({ question, answer }) {
 		<div className="accordion-item" onClick={() => setIsActive(!isActive)}>
 			<div className="question">
 				<div className='title'>{question}</div>
-				<Arrow className={`arrow ${isActive ? 'active' : null }`}/>
+				<Arrow className={`arrow ${isActive ? 'active' : '' }`}/>
 			</div>
 			{isActive && <div className="answer">{answer}</div>}
 		</div>

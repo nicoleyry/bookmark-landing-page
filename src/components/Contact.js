@@ -37,7 +37,7 @@ export default function Contact() {
 							value={email}
 							placeholder='Enter your email address'
 							onChange={onChangeHandler}
-							className={`${error ? 'error' : null}`}
+							className={`${error ? 'error' : ''}`}
 						/>
 
 						{error && <img className='error-img' src={errorImg} alt="Error!" />}

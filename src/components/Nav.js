@@ -22,8 +22,8 @@ export default function Nav() {
 				<p className='menu'>contact</p>
 				<p className='menu login'>login</p>
 			</div>
-			<img className={`hamburgerIcon ${closeMenu ? 'show' : null}`} src={hamburgerIcon} onClick={menuHandler} alt='hamburger icon' />
-			<div className={`mobile-nav ${closeMenu ? null : 'show'}`}>
+			<img className={`hamburgerIcon ${closeMenu ? 'show' : ''}`} src={hamburgerIcon} onClick={menuHandler} alt='hamburger icon' />
+			<div className={`mobile-nav ${closeMenu ? '' : 'show'}`}>
 				<div className="mobile-nav-container">
 					<div className="top">
 						<div className="logo-container">
