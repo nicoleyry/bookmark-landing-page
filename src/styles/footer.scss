@@ -11,12 +11,21 @@
 		justify-content: space-between;
 		align-items: center;
 		margin: 0 auto;
-		padding: 35px 0;
+		padding: 35px 20px;
+
+		@media screen and (max-width: var.$breakpoint-m) {
+			flex-direction: column;
+			gap: 30px;
+		}
 
 		& .menu-container {
 			display: flex;
 			gap: 30px;
 			align-items: center;
+
+			@media screen and (max-width: var.$breakpoint-m) {
+				flex-direction: column;
+			}
 
 			& .menu {
 				@include mix.menu-text(var.$white);
