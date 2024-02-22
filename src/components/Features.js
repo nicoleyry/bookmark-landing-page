@@ -23,7 +23,7 @@ export default function Features() {
 			</div>
 
 			<div className="tab-content">
-				<img src={tabContent[activeTab].image} alt={tabContent[activeTab].title} />
+				<img src={tabContent[activeTab].image} className='tab-img' alt={tabContent[activeTab].title} />
 				<div className="tab-text">
 					<p className="title">{tabContent[activeTab].title}</p>
 					<p className="text">{tabContent[activeTab].text}</p>

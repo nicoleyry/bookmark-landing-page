@@ -16,6 +16,12 @@
 		text-align: center;
 		border-bottom: 1px solid rgba(var.$grayish-blue, 0.3);
 
+		@media screen and (max-width: var.$breakpoint-L) {
+			width: 100%;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(3, 1fr);
+		}
+
 		& .tab {
 			cursor: pointer;
 			font-size: 16px;
@@ -24,6 +30,12 @@
 			padding-bottom: 20px;
 			border-bottom: 3px solid transparent;
 
+			@media screen and (max-width: var.$breakpoint-L) {
+				border-top: 1px solid rgba(145, 148, 161, 0.3);
+				padding-top: 20px;
+				position: relative;
+			}
+
 			&:hover {
 				color: var.$soft-red;
 			}
@@ -31,6 +43,21 @@
 			&.active {
 				color: var.$very-dark-blue;
 				border-bottom: 3px solid var.$soft-red;
+
+				@media screen and (max-width: var.$breakpoint-L) {
+					border-bottom: 0px;
+
+					&::after {
+						content: '';
+						height: 5px;
+						width: 150px;
+						background-color: var.$soft-red;
+						transform: translateX(-50%);
+						position: absolute;
+						bottom: -1px;
+						left: 50%;
+					}
+				}
 			}
 		}
 	}
@@ -43,12 +70,29 @@
 		align-items: center;
 		position: relative;
 
+		@media screen and (max-width: var.$breakpoint-L) {
+			grid-template-rows: repeat(2, auto);
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+
+		& .tab-img {
+			@media screen and (max-width: var.$breakpoint-m) {
+				height: 100%;
+			}
+		}
+
 		& .tab-text {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 			align-items: flex-start;
 			gap: 30px;
+
+			@media screen and (max-width: var.$breakpoint-L) {
+				align-items: center;
+				text-align: center;
+			}
 
 			& .title {
 				@include mix.title();
