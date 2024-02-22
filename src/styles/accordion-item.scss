@@ -6,6 +6,10 @@
 	padding: 20px 20px 20px 0;
 	cursor: pointer;
 
+	@media screen and (max-width: var.$breakpoint-s) {
+		padding: 10px 10px 10px 0;
+	}
+
 	&:last-child {
 		border-bottom: 1px solid var.$grayish-blue;
 	}
@@ -26,6 +30,8 @@
 		}
 
 		& .arrow {
+			flex-shrink: 0;
+
 			&.active {
 				stroke: var.$soft-red;
 				transform: rotate(180deg);
