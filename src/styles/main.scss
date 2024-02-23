@@ -69,6 +69,7 @@
 	& .bg-pattern {
 		bottom: 0;
 		right: -65%;
+		height: 400px;
 
 		@include mix.bg-pattern();
 
@@ -85,8 +86,8 @@
 		}
 
 		@media screen and (max-width: var.$breakpoint-s) {
-			top: 100px;
-			height: 150px;
+			top: 80px;
+			height: 130px;
 		}
 	}
 }

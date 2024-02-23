@@ -47,7 +47,6 @@
 
 @mixin bg-pattern() {
 	position: absolute;
-	height: var.$pattern-h;
 	width: 100%;
 	background-color: var.$soft-blue;
 	border-radius: 200px;

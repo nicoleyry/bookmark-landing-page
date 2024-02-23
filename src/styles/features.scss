@@ -2,10 +2,16 @@
 @use "./mixins" as mix;
 
 .features {
-	$bg-pattern-pos: 300px;
-
-	margin-bottom: calc(var.$content-gap + var.$pattern-h - $bg-pattern-pos);
 	position: relative;
+
+	$bg-pattern-pos-top: 300px;
+	$pattern-height: 400px;
+
+	margin-bottom: calc(var.$content-gap + $pattern-height - $bg-pattern-pos-top);
+	
+	@media screen and (max-width: var.$breakpoint-L) {
+		margin-bottom: 80px;	
+	}
 
 	& .tabs-container {
 		width: 70%;
@@ -109,9 +115,27 @@
 	}
 
 	& .bg-pattern {
-		top: $bg-pattern-pos;
+		height: $pattern-height;
+		top: $bg-pattern-pos-top;
 		right: 65%;
 
 		@include mix.bg-pattern();
+
+		@media screen and (max-width: var.$breakpoint-L) {
+			height: 350px;
+			top: 400px;
+			right: 40%;
+		}
+
+		@media screen and (max-width: var.$breakpoint-m) {
+			height: 250px;
+			top: 450px;
+		}
+
+		@media screen and (max-width: var.$breakpoint-s) {
+			width: 150%;
+			height: 150px;
+			top: 530px;
+		}
 	}
 }
